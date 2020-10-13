@@ -24,4 +24,4 @@
 <!-- SCRIPTS -->
     <?php include_once '../app/vues/template/partials/_scripts.php'; ?>
   </body>
- </html>
+</html>

@@ -14,3 +14,5 @@ define ('USERPWD', 'root');
 // Zones dynamiques du template
 $content = '';
 $title = '';
+
+define('TITRE_POSTS_INDEX', "Liste des posts");
