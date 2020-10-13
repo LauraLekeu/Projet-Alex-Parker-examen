@@ -6,7 +6,7 @@
 */
 ?>
 <!-- Preloader Start -->
-    <div class="preloader">
+    <!-- <div class="preloader">
       <div class="rounder"></div>
-    </div>
+    </div> -->
     <!-- Preloader End -->

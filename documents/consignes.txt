@@ -15,10 +15,10 @@ ALEX PARKER - CONSIGNES
 	3. Formulaire d'ajout et de modification d'un post
 		- title, text, categorie et quote du post
 
-LA LISTE DES CATEGORIES DANS LE MENU
-	Ajouter la lsite des catégories dans la colonne de gauche (présente sur chaque page)
-	Vous ne devez pas activer ces liens, juste les afficher !!!
-	(Pas de routes pour les catégories)
+OK- LA LISTE DES CATEGORIES DANS LE MENU
+			Ajouter la lite des catégories dans la colonne de gauche (présente sur chaque page)
+			Vous ne devez pas activer ces liens, juste les afficher !!!
+			(Pas de routes pour les catégories)
 
 BONUS: afficher le nombre de posts pour chaque catégorie dans la liste des catégories
 
