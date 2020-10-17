@@ -51,7 +51,21 @@ function addAction(\PDO $connexion) {
   // Demander au modèle d'ajouter le post
   include_once '../app/modeles/postsModele.php';
   $id = PostsModele\insertOne($connexion, $_POST);
-
   // Rediriger vers la liste des posts
   header('location: ' . BASE_URL_PUBLIC . 'posts');
+}
+
+function editFormAction(\PDO $connexion, int $id) {
+  // Demander au modèle le post à modifier
+  include_once '../app/modeles/postsModele.php';
+  $post = PostsModele\findOneById($connexion, $id);
+  // Demander les catégories au modèle
+  include_once '../app/modeles/categoriesModele.php';
+  $categories = \App\Modeles\CategoriesModele\findAll($connexion);
+  // Charger la vue editForm dans $content
+  GLOBAL $content, $title;
+  $title = TITRE_POSTS_EDITFORM;
+  ob_start();
+    include '../app/vues/posts/editForm.php';
+  $content = ob_get_clean();
 }

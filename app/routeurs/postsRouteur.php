@@ -29,4 +29,11 @@ switch ($_GET['posts']):
     // ACTION: add
     PostsControleur\addAction($connexion);
     break;
+  case 'editForm':
+    // MODIFICATION D'UN POST : FORMULAIRE
+    // PATTERN: /index.php?posts=editForm&id=x
+    // CTRL: postsControleur
+    // ACTION: editForm
+    PostsControleur\editFormAction($connexion, $_GET['id']);
+    break;
 endswitch;

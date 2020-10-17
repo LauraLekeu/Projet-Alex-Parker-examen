@@ -15,6 +15,11 @@ RewriteEngine on
 
 # ROUTES DES POSTS --------------------------------
 
+# MODIFICATION D'UN POST : FORMULAIRE
+# PATTERN : /posts/{id}/{slug-du-post}/edit/form.html
+# URL : index.php?posts=editForm&id=x
+RewriteRule ^posts\/([1-9][0-9]*)\/([a-z0-9\-]*)\/edit\/form.html$ index.php?posts=editForm&id=$1 [L]
+
 # AJOUT D'UN POST : INSERT
 # PATTERN : /posts/add/insert.html
 # URL : index.php?posts=add

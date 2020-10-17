@@ -15,5 +15,11 @@ define ('USERPWD', 'root');
 $content = '';
 $title = '';
 
+// Textes
 define('TITRE_POSTS_INDEX', "Blog");
 define('TITRE_POSTS_ADDFORM', "Add a post");
+define('TITRE_POSTS_EDITFORM', "Edit a post");
+
+// Dates
+define('DATE_POSTS_INDEX', "Y-m-d");
+define('DATE_POSTS_SHOW', "F d, Y");
