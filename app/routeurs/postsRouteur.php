@@ -15,4 +15,11 @@ switch ($_GET['posts']):
     // ACTION:  show
     PostsControleur\showAction($connexion, $_GET['id']);
     break;
+  case 'addForm':
+    // AJOUT D'UN POST : FORMULAIRE
+    // PATTERN: /index.php?posts=addForm
+    // CTRL: postsControleur
+    // ACTION: addForm
+    PostsControleur\addFormAction($connexion);
+    break;
 endswitch;

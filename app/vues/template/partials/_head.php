@@ -17,7 +17,7 @@
     <meta name="robots" content="index,follow">
     <base href="<?php echo BASE_URL_PUBLIC; ?>" target="_top">
 <!-- $title -->
-    <title><?php echo $title; ?></title>
+    <title>Alex Parker - <?php echo $title; ?></title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/favicon/apple-touch-icon.png">

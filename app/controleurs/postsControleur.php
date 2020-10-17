@@ -27,11 +27,22 @@ function showAction(\PDO $connexion, int $id) {
   // Demander le détail du post au modèle
   include_once '../app/modeles/postsModele.php';
   $post = PostsModele\findOneById($connexion, $id);
-
   // Charger la vue show dans $content
   GLOBAL $content, $title;
   $title = $post['title'];
   ob_start();
     include '../app/vues/posts/show.php';
+  $content = ob_get_clean();
+}
+
+function addFormAction(\PDO $connexion) {
+  // Demander la liste des catégories au modèle
+  include_once '../app/modeles/categoriesModele.php';
+  $categories = \App\Modeles\CategoriesModele\findAll($connexion);
+  // Charger la vue addForm dans $content
+  GLOBAL $content, $title;
+  $title = TITRE_POSTS_ADDFORM;
+  ob_start();
+    include '../app/vues/posts/addForm.php';
   $content = ob_get_clean();
 }

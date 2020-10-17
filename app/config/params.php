@@ -15,4 +15,5 @@ define ('USERPWD', 'root');
 $content = '';
 $title = '';
 
-define('TITRE_POSTS_INDEX', "Liste des posts");
+define('TITRE_POSTS_INDEX', "Blog");
+define('TITRE_POSTS_ADDFORM', "Add a post");

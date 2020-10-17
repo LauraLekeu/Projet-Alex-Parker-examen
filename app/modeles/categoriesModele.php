@@ -12,7 +12,7 @@ function findAll(\PDO $connexion) {
           FROM posts p
           JOIN categories c ON p.category_id = c.id
           GROUP BY c.id
-          ORDER BY name ASC
+          ORDER BY c.name ASC
           LIMIT 6;";
   $rs = $connexion->query($sql);
   return $rs->fetchAll(\PDO::FETCH_ASSOC);

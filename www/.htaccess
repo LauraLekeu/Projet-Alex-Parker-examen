@@ -15,6 +15,12 @@ RewriteEngine on
 
 # ROUTES DES POSTS --------------------------------
 
+
+# AJOUT D'UN POST : FORMULAIRE
+# PATTERN : /posts/add/form.html
+# URL : index.php?posts=addForm
+RewriteRule ^posts\/add\/form.html$ index.php?posts=addForm [L]
+
 # ROUTE DETAIL D'UN POST
 # PATTERN : /posts/{id}/{slug-du-post}.html
 # URL : index.php?posts=show&id=x

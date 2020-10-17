@@ -18,7 +18,7 @@
     <div class="col-md-12 blog-post">
       <!-- Post Headline Start -->
       <div class="post-title">
-        <h1><?php echo $post['title']; ?></h1>
+        <h1><?php echo $title; ?></h1>
       </div>
       <!-- Post Headline End -->
       <!-- Post Detail Start -->
