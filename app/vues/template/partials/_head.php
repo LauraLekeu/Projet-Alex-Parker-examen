@@ -15,7 +15,8 @@
     <meta name="url" content="http://www.yourdomainname.com">
     <meta name="copyright" content="company name">
     <meta name="robots" content="index,follow">
-<!-- $title -->  
+    <base href="<?php echo BASE_URL_PUBLIC; ?>" target="_top">
+<!-- $title -->
     <title><?php echo $title; ?></title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="images/favicon/favicon.ico">

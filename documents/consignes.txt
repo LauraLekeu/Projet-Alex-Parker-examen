@@ -9,8 +9,8 @@ ALEX PARKER - CONSIGNES
 		OK- Lien vers le formulaire d'ajout d'un post
 
 	2. Détails d'un post
-		- title, text, categporie et quote du post
-		- lien pour la modification et la suppression du post
+		OK- title, text, categporie et quote du post
+		OK- lien pour la modification et la suppression du post
 
 	3. Formulaire d'ajout et de modification d'un post
 		- title, text, categorie et quote du post

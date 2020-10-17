@@ -13,6 +13,12 @@ RewriteEngine on
 # ROUTES
 #--------------------------------------------------
 
+# ROUTES DES POSTS --------------------------------
+
+# ROUTE DETAIL D'UN POST
+# PATTERN : /posts/{id}/{slug-du-post}.html
+# URL : index.php?posts=show&id=x
+RewriteRule ^posts\/([1-9][0-9]*)\/([a-z0-9\-]*).html$ index.php?posts=show&id=$1 [L]
 
 #--------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
