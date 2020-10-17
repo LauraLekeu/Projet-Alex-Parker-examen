@@ -36,4 +36,11 @@ switch ($_GET['posts']):
     // ACTION: editForm
     PostsControleur\editFormAction($connexion, $_GET['id']);
     break;
+  case 'edit':
+    // MODIFICATION D'UN POST : UPDATE
+    // PATTERN: /index.php?posts=edit&id=x
+    // CTRL: postsControleur
+    // ACTION: edit
+    PostsControleur\editAction($connexion, $_GET['id']);
+    break;
 endswitch;

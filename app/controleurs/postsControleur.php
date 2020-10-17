@@ -69,3 +69,11 @@ function editFormAction(\PDO $connexion, int $id) {
     include '../app/vues/posts/editForm.php';
   $content = ob_get_clean();
 }
+
+function editAction(\PDO $connexion, int $id) {
+  // Demander au modèle de modifier le post
+  include_once '../app/modeles/postsModele.php';
+  $return = PostsModele\updateOneById($connexion, $id, $_POST);
+  // Rediriger vers la liste des posts
+  header('location: ' . BASE_URL_PUBLIC . 'posts');
+}
