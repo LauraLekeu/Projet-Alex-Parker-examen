@@ -8,9 +8,10 @@ namespace App\Modeles\PostsModele;
 
 /**
  * [findAll description]
- * @param  PDO    $connexion [description]
+ * @param  PDO   $connexion [description]
+ * @return array            [description]
  */
-function findAll(\PDO $connexion) {
+function findAll(\PDO $connexion) :array {
   $sql = "SELECT p.id AS postId,
                  p.title AS postTitle,
                  p.text AS postText,
@@ -28,8 +29,13 @@ function findAll(\PDO $connexion) {
   return $rs->fetchAll(\PDO::FETCH_ASSOC);
 }
 
-
-function findOneById(\PDO $connexion, int $id) {
+/**
+ * [findOneById description]
+ * @param  PDO   $connexion [description]
+ * @param  int   $id        [description]
+ * @return array            [description]
+ */
+function findOneById(\PDO $connexion, int $id) :array {
   $sql = "SELECT *,
                  p.id AS postId,
                  c.id AS categorieId,
@@ -44,6 +50,12 @@ function findOneById(\PDO $connexion, int $id) {
   return $rs->fetch(\PDO::FETCH_ASSOC);
 }
 
+/**
+ * [insertOne description]
+ * @param  PDO   $connexion [description]
+ * @param  array $data      [description]
+ * @return int              [description]
+ */
 function insertOne(\PDO $connexion, array $data) :int {
   $sql = "INSERT INTO posts
           SET title       = :title,
@@ -60,6 +72,13 @@ function insertOne(\PDO $connexion, array $data) :int {
   return $connexion->lastInsertId();
 }
 
+/**
+ * [updateOneById description]
+ * @param  PDO   $connexion [description]
+ * @param  int   $id        [description]
+ * @param  array $data      [description]
+ * @return bool             [description]
+ */
 function updateOneById(\PDO $connexion, int $id, array $data) :bool {
   $sql = "UPDATE  posts
           SET title       = :title,
@@ -77,7 +96,13 @@ function updateOneById(\PDO $connexion, int $id, array $data) :bool {
   return $rs->execute();
 }
 
-function deleteOneById(\PDO $connexion, int $id) {
+/**
+ * [deleteOneById description]
+ * @param  PDO  $connexion [description]
+ * @param  int  $id        [description]
+ * @return bool            [description]
+ */
+function deleteOneById(\PDO $connexion, int $id) :bool {
   $sql = "DELETE FROM posts
           WHERE id = :id;";
 $rs = $connexion->prepare($sql);

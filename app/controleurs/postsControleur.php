@@ -23,6 +23,11 @@ function indexAction(\PDO $connexion) {
   $content = ob_get_clean();
 }
 
+/**
+ * [showAction description]
+ * @param  PDO    $connexion [description]
+ * @param  int    $id        [description]
+ */
 function showAction(\PDO $connexion, int $id) {
   // Demander le détail du post au modèle
   include_once '../app/modeles/postsModele.php';
@@ -35,6 +40,10 @@ function showAction(\PDO $connexion, int $id) {
   $content = ob_get_clean();
 }
 
+/**
+ * [addFormAction description]
+ * @param PDO $connexion [description]
+ */
 function addFormAction(\PDO $connexion) {
   // Demander la liste des catégories au modèle
   include_once '../app/modeles/categoriesModele.php';
@@ -47,6 +56,10 @@ function addFormAction(\PDO $connexion) {
   $content = ob_get_clean();
 }
 
+/**
+ * [addAction description]
+ * @param PDO $connexion [description]
+ */
 function addAction(\PDO $connexion) {
   // Demander au modèle d'ajouter le post
   include_once '../app/modeles/postsModele.php';
@@ -55,6 +68,11 @@ function addAction(\PDO $connexion) {
   header('location: ' . BASE_URL_PUBLIC . 'posts');
 }
 
+/**
+ * [editFormAction description]
+ * @param  PDO    $connexion [description]
+ * @param  int    $id        [description]
+ */
 function editFormAction(\PDO $connexion, int $id) {
   // Demander au modèle le post à modifier
   include_once '../app/modeles/postsModele.php';
@@ -70,6 +88,11 @@ function editFormAction(\PDO $connexion, int $id) {
   $content = ob_get_clean();
 }
 
+/**
+ * [editAction description]
+ * @param  PDO    $connexion [description]
+ * @param  int    $id        [description]
+ */
 function editAction(\PDO $connexion, int $id) {
   // Demander au modèle de modifier le post
   include_once '../app/modeles/postsModele.php';
@@ -78,6 +101,11 @@ function editAction(\PDO $connexion, int $id) {
   header('location: ' . BASE_URL_PUBLIC . 'posts');
 }
 
+/**
+ * [deleteAction description]
+ * @param  PDO    $connexion [description]
+ * @param  int    $id        [description]
+ */
 function deleteAction(\PDO $connexion, int $id) {
   // Demander au modèle de supprimer un post
   include_once '../app/modeles/postsModele.php';

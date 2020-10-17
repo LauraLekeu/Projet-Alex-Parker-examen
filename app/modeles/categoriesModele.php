@@ -5,7 +5,12 @@
 
 namespace App\Modeles\CategoriesModele;
 
-function findAll(\PDO $connexion) {
+/**
+ * [findAll description]
+ * @param  PDO   $connexion [description]
+ * @return array            [description]
+ */
+function findAll(\PDO $connexion) :array {
   $sql = "SELECT COUNT(p.id) AS nbPostsId,
                  p.category_id AS postCategorieId,
                  c.name AS categorieName,
