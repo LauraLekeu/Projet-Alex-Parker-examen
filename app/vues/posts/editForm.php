@@ -23,7 +23,7 @@
              </div>
              <!-- Post Headline End -->
           <!-- Form Start -->
-            <form action="posts/<?php echo $post['id']; ?>/<?php echo \Noyau\Fonctions\slugify($post['title']); ?>/edit/update.html" method="post">
+            <form action="posts/<?php echo $post['postId']; ?>/<?php echo \Noyau\Fonctions\slugify($post['title']); ?>/edit/update.html" method="post">
               <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" name="title" id="title" class="form-control" value="<?php echo $post['title']; ?>" />

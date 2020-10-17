@@ -15,6 +15,11 @@ RewriteEngine on
 
 # ROUTES DES POSTS --------------------------------
 
+# SUPPRESSION D'UN POST : DELETE
+# PATTERN : /posts/{id}/{slug-du-post}/delete.html
+# URL : index.php?posts=delete&id=x
+RewriteRule ^posts\/([1-9][0-9]*)\/([a-z0-9\-]*)\/delete.html$ index.php?posts=delete&id=$1 [L]
+
 # MODIFICATION D'UN POST : UPDATE
 # PATTERN : /posts/{id}/{slug-du-post}/edit/update.html
 # URL : index.php?posts=edit&id=x

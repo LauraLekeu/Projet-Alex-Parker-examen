@@ -10,3 +10,5 @@
     <script type="text/javascript" src="js/plugin.js"></script>
     <!-- Main Javascript File  -->
     <script type="text/javascript" src="js/scripts.js"></script>
+
+    <script src="js/app.js"></script>

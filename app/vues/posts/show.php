@@ -35,7 +35,7 @@
       <!-- Post Buttons -->
       <div>
         <a href="posts/<?php echo $post['postId']; ?>/<?php echo \Noyau\Fonctions\slugify($post['title']); ?>/edit/form.html" type="button" class="btn btn-primary">Edit Post</a>
-        <a href="posts\delete\<?php echo $post['postId']; ?>" type="button" class="btn btn-secondary" role="button">Delete Post</a>
+        <a href="posts/<?php echo $post['postId']; ?>/<?php echo \Noyau\Fonctions\slugify($post['title']); ?>/delete.html" type="button" class="delete btn btn-secondary" role="button">Delete Post</a>
       </div>
       <!-- Post Buttons End -->
     </div>

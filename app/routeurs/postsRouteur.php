@@ -43,4 +43,11 @@ switch ($_GET['posts']):
     // ACTION: edit
     PostsControleur\editAction($connexion, $_GET['id']);
     break;
+  case 'delete':
+    // SUPPRESSION D'UN POST : DELETE
+    // PATTERN: /index.php?posts=delete&id=x
+    // CTRL: postsControleur
+    // ACTION: delete
+    PostsControleur\deleteAction($connexion, $_GET['id']);
+    break;
 endswitch;

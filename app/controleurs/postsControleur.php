@@ -77,3 +77,11 @@ function editAction(\PDO $connexion, int $id) {
   // Rediriger vers la liste des posts
   header('location: ' . BASE_URL_PUBLIC . 'posts');
 }
+
+function deleteAction(\PDO $connexion, int $id) {
+  // Demander au modèle de supprimer un post
+  include_once '../app/modeles/postsModele.php';
+  $return = PostsModele\deleteOneById($connexion, $id);
+  // Rediriger vers la liste des posts
+  header('location: ' . BASE_URL_PUBLIC . 'posts');
+}
