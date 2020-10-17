@@ -22,4 +22,11 @@ switch ($_GET['posts']):
     // ACTION: addForm
     PostsControleur\addFormAction($connexion);
     break;
+  case 'add':
+    // AJOUT D'UN POST : INSERT
+    // PATTERN: /index.php?posts=add
+    // CTRL: postsControleur
+    // ACTION: add
+    PostsControleur\addAction($connexion);
+    break;
 endswitch;

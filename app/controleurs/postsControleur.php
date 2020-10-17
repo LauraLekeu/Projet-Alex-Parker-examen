@@ -46,3 +46,12 @@ function addFormAction(\PDO $connexion) {
     include '../app/vues/posts/addForm.php';
   $content = ob_get_clean();
 }
+
+function addAction(\PDO $connexion) {
+  // Demander au modèle d'ajouter le post
+  include_once '../app/modeles/postsModele.php';
+  $id = PostsModele\insertOne($connexion, $_POST);
+
+  // Rediriger vers la liste des posts
+  header('location: ' . BASE_URL_PUBLIC . 'posts');
+}

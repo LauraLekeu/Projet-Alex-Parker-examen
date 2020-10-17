@@ -23,7 +23,7 @@
       <!-- Post Headline End -->
       <!-- Post Detail Start -->
       <div class="post-info">
-        <span><?php echo Noyau\Fonctions\formater_date($post['created_at'], DATE_POSTS_SHOW); ?></span> | <span><?php echo $post['name']; ?></span>
+        <span><?php echo Noyau\Fonctions\formater_date($post['postDate'], DATE_POSTS_SHOW); ?></span> | <span><?php echo $post['name']; ?></span>
       </div>
       <!-- Post Detail End -->
       <p><?php echo $post['text']; ?></p>

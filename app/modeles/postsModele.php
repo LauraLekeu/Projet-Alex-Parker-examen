@@ -22,7 +22,7 @@ function findAll(\PDO $connexion) {
                  c.created_at AS categorieDate
           FROM posts p
           JOIN categories c ON p.category_id = c.id
-          ORDER BY p.created_at DESC
+          ORDER BY postDate DESC
           LIMIT 10;";
   $rs = $connexion->query($sql);
   return $rs->fetchAll(\PDO::FETCH_ASSOC);
@@ -32,7 +32,9 @@ function findAll(\PDO $connexion) {
 function findOneById(\PDO $connexion, int $id) {
   $sql = "SELECT *,
                  p.id AS postId,
-                 c.id AS categorieId
+                 c.id AS categorieId,
+                 p.created_at AS postDate,
+                 c.created_at AS categorieDate
           FROM posts p
           JOIN categories c ON p.category_id = c.id
           WHERE p.id = :id;";
@@ -40,4 +42,20 @@ function findOneById(\PDO $connexion, int $id) {
   $rs->bindValue(':id', $id, \PDO::PARAM_INT);
   $rs->execute();
   return $rs->fetch(\PDO::FETCH_ASSOC);
+}
+
+function insertOne(\PDO $connexion, array $data) :int {
+  $sql = "INSERT INTO posts
+          SET title       = :title,
+              text        = :text,
+              quote       = :quote,
+              category_id = :categorie,
+              created_at  = NOW();";
+  $rs = $connexion->prepare($sql);
+  $rs->bindValue(':title', $data['title'], \PDO::PARAM_STR);
+  $rs->bindValue(':text', $data['text'], \PDO::PARAM_STR);
+  $rs->bindValue(':quote', $data['quote'], \PDO::PARAM_STR);
+  $rs->bindValue(':categorie', $data['category_id'], \PDO::PARAM_INT);
+  $rs->execute();
+  return $connexion->lastInsertId();
 }

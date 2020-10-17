@@ -13,5 +13,5 @@
 
 
 // Constantes des format de dates
-define('DATE_POSTS_INDEX', "Y m d");
-define('DATE_POSTS_SHOW', "l d Y");
+define('DATE_POSTS_INDEX', "Y-m-d");
+define('DATE_POSTS_SHOW', "F d, Y");
